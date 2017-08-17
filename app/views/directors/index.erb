@@ -1,0 +1,9 @@
+<a href="/directors">Director Index</a>
+
+<h1><%= @directors.name %></h1>
+
+<% @directors.films.each do |film| %>
+  <p><%= film.title %></p>
+<% end %>
+
+<p><%= @directors.films.sum("box_office_sales") %></p>
